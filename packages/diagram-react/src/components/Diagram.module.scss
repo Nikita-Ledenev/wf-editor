@@ -1,0 +1,158 @@
+@use 'tokens' as *;
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: $color-diagram-bg;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.viewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.world {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+.edges {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $z-arrows;
+  pointer-events: none;
+}
+
+.blockWrap {
+  position: absolute;
+  z-index: $z-block;
+  cursor: move;
+  transition: opacity 0.15s ease;
+}
+
+// Блок не связан с выделенным — приглушаем, чтобы выделить контекст.
+.blockDimmed {
+  opacity: 0.25;
+}
+
+.block {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-3 18px;
+  font-family: $font-family-base;
+  font-size: $font-size-block;
+  font-weight: $font-weight-semibold;
+  line-height: 1.2;
+  white-space: nowrap;
+  border: $border-block solid;
+  border-radius: $radius-sm;
+  user-select: none;
+}
+
+.blockSelected {
+  border-radius: $radius-md;
+  z-index: $z-block-selected;
+}
+
+// Пунктирная рамка выделения с отступом наружу от блока.
+.marquee {
+  position: absolute;
+  inset: -#{$marquee-offset};
+  border: 2px dashed $color-marquee;
+  border-radius: $radius-md;
+  pointer-events: none;
+  z-index: $z-block-selected;
+}
+
+.handle {
+  position: absolute;
+  width: $handle-size;
+  height: $handle-size;
+  background: $color-handle;
+}
+
+$h: -#{calc($handle-size / 2)};
+
+.handle_tl {
+  top: $h;
+  left: $h;
+}
+
+.handle_tm {
+  top: $h;
+  left: calc(50% - #{calc($handle-size / 2)});
+}
+
+.handle_tr {
+  top: $h;
+  right: $h;
+}
+
+.handle_ml {
+  top: calc(50% - #{calc($handle-size / 2)});
+  left: $h;
+}
+
+.handle_mr {
+  top: calc(50% - #{calc($handle-size / 2)});
+  right: $h;
+}
+
+.handle_bl {
+  bottom: $h;
+  left: $h;
+}
+
+.handle_bm {
+  bottom: $h;
+  left: calc(50% - #{calc($handle-size / 2)});
+}
+
+.handle_br {
+  bottom: $h;
+  right: $h;
+}
+
+.zoomControls {
+  position: absolute;
+  right: $space-4;
+  bottom: $space-4;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 5;
+
+  button {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: $color-text-secondary;
+    border: $border-hairline solid $color-border-hairline;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.12s ease;
+
+    &:hover {
+      background: $color-btn-bg;
+    }
+  }
+}

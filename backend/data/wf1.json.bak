@@ -1,0 +1,162 @@
+[
+	{
+		"initialIndex": 0,
+		"name": "Закупка",
+		"x": 258,
+		"y": 110,
+		"nextSteps": [
+			2
+		],
+		"color": "#666666"
+	},
+	{
+		"initialIndex": 1,
+		"name": "Движение до ПТО",
+		"x": 583,
+		"y": 136,
+		"nextSteps": [
+			3
+		],
+		"color": "#aa8800"
+	},
+	{
+		"initialIndex": 2,
+		"name": "Отправка продавцом",
+		"x": 500,
+		"y": 52,
+		"nextSteps": [
+			1,
+			4
+		],
+		"color": "#0044aa"
+	},
+	{
+		"initialIndex": 3,
+		"name": "Таможенное оформление",
+		"x": 593,
+		"y": 205,
+		"nextSteps": [
+			4
+		],
+		"color": "#a02c2c"
+	},
+	{
+		"initialIndex": 4,
+		"name": "Доставка до логистического терминала",
+		"x": 187,
+		"y": 226,
+		"nextSteps": [
+			5
+		],
+		"color": "#0044aa"
+	},
+	{
+		"initialIndex": 5,
+		"name": "Сортировка",
+		"x": 147,
+		"y": 310,
+		"nextSteps": [
+			6
+		],
+		"color": "#666666"
+	},
+	{
+		"initialIndex": 6,
+		"name": "Движение до пункта назначения",
+		"x": 465,
+		"y": 312,
+		"nextSteps": [
+			7
+		],
+		"color": "#0044aa"
+	},
+	{
+		"initialIndex": 7,
+		"name": "Хранение",
+		"x": 395,
+		"y": 409,
+		"nextSteps": [
+			8,
+			9
+		],
+		"color": "#666666"
+	},
+	{
+		"initialIndex": 8,
+		"name": "Доставка до ПВ",
+		"x": 172,
+		"y": 500,
+		"nextSteps": [
+			10
+		],
+		"color": "#0044aa"
+	},
+	{
+		"initialIndex": 9,
+		"name": "Доставка до адреса получателя",
+		"x": 568,
+		"y": 495,
+		"nextSteps": [
+			11
+		],
+		"color": "#0044aa"
+	},
+	{
+		"initialIndex": 10,
+		"name": "Выдано в ПВ",
+		"x": 179,
+		"y": 590,
+		"nextSteps": [
+			12
+		],
+		"color": "#338000"
+	},
+	{
+		"initialIndex": 11,
+		"name": "Выдано по адресу получателя",
+		"x": 574,
+		"y": 584,
+		"nextSteps": [
+			12
+		],
+		"color": "#338000"
+	},
+	{
+		"initialIndex": 12,
+		"name": "Возврат",
+		"x": 394,
+		"y": 636,
+		"nextSteps": [
+			13
+		],
+		"color": "#a02c2c"
+	},
+	{
+		"initialIndex": 13,
+		"name": "Доставка на сортировочный пункт",
+		"x": 195,
+		"y": 750,
+		"nextSteps": [
+			14
+		],
+		"color": "#0044aa"
+	},
+	{
+		"initialIndex": 14,
+		"name": "Сортировка",
+		"x": 558,
+		"y": 749,
+		"nextSteps": [
+			15
+		],
+		"color": "#666666"
+	},
+	{
+		"initialIndex": 15,
+		"name": "Отправка продавцу",
+		"x": 732,
+		"y": 747,
+		"nextSteps": [],
+		"color": "#0044aa"
+	}
+]

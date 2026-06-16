@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@wf/table-vue": "http://localhost:4101/spa.js",
+    "@wf/diagram-react": "http://localhost:4102/spa.js"
+  }
+}

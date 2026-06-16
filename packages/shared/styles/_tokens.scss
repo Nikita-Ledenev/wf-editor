@@ -1,0 +1,91 @@
+// Дизайн-токены: единый источник правды для обоих микрофронтов и оболочки.
+// Шрифт Open Sans, иконки FontAwesome 6. Значения сняты с макета.
+
+// Цвета шагов (приходят из данных)
+$step-gray: #666;
+$step-mustard: #a80;
+$step-blue: #04a;
+$step-red: #a02c2c;
+$step-green: #338000;
+
+// ---------- Фоны / поверхности ----------
+$color-page-bg: #f9f9f9;
+$color-sidebar-strip: #a80;
+$color-diagram-bg: #ededed;
+$color-table-head-bg: #ededed;
+$color-row-selected-bg: #e6e6e6;
+$color-row-hover-bg: #f0f0f0;
+$color-block-bg: #fff;
+$color-btn-bg: #ececec;
+$color-btn-bg-hover: #e4e4e4;
+
+// ---------- Текст ----------
+$color-text-primary: #1f1f1f;
+$color-text-secondary: #3a3a3a;
+$color-text-muted: #8a8a8a;
+$color-text-title: #2e2e2e;
+$color-text-btn: #4a4a4a;
+$color-text-on-selected: #fff;
+
+// ---------- Линии / границы / иконки ----------
+$color-border-hairline: #ebebeb;
+$color-divider: rgba(0, 0, 0, 0.06);
+$color-icon-trash: #7e7e7e;
+$color-icon-plus: #5a5a5a;
+$color-arrow: #1a1a1a;
+$color-marquee: #9a9a9a;
+$color-handle: #5a5a5a;
+
+// ---------- Типографика ----------
+$font-family-base:
+  'Open Sans',
+  system-ui,
+  -apple-system,
+  sans-serif;
+$font-size-title: 22px;
+$font-size-block: 16px;
+$font-size-cell: 15px;
+$font-size-base: 14px;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$line-height-base: 1.45;
+
+// ---------- Spacing ----------
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 20px;
+$space-6: 24px;
+$sidebar-strip-width: 37px;
+$row-height: 46px;
+$cell-padding-y: 13px;
+$cell-padding-x: 18px;
+$panel-padding: 24px;
+$marquee-offset: 11px;
+
+// ---------- Радиусы ----------
+$radius-sm: 6px;
+$radius-md: 8px;
+$radius-lg: 12px;
+
+// ---------- Границы / линии ----------
+$border-block: 2px;
+$border-hairline: 1px;
+$arrow-width: 2px;
+$arrowhead-size: 11px;
+$handle-size: 10px;
+
+// ---------- Иконки ----------
+$icon-size-file: 14px;
+$icon-size-trash: 16px;
+$icon-size-user: 18px;
+$icon-gap: 10px;
+
+// ---------- z-index ----------
+$z-arrows: 1;
+$z-block: 2;
+$z-block-selected: 3;
+$z-table-head: 10;
+$z-sidebar-strip: 20;
