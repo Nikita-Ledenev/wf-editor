@@ -10,7 +10,7 @@
     "packages/root-config"
   ],
   "scripts": {
-    "backend": "npm --prefix backend run dev",
+    "backend": "PORT=4000 npm --prefix backend run dev",
     "table": "npm --workspace @wf/table-vue run dev",
     "diagram": "npm --workspace @wf/diagram-react run dev",
     "root": "npm --workspace @wf/root-config run dev",
@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
+    "concurrently": "^9.2.1",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.37.5",
