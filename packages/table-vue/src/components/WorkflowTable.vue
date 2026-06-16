@@ -231,7 +231,16 @@ watch(selectedIndex, async (idx) => {
 
           <td :class="[$style.td, $style.tdAction]">
             <button
-              :class="$style.deleteBtn"
+              :class="$style.iconBtn"
+              type="button"
+              data-cy="edit"
+              aria-label="Переименовать состояние"
+              @click.stop="startEdit(step)"
+            >
+              <i class="fa-regular fa-pen-to-square" aria-hidden="true" />
+            </button>
+            <button
+              :class="[$style.iconBtn, $style.deleteBtn]"
               type="button"
               data-cy="delete"
               aria-label="Удалить состояние"
@@ -313,7 +322,7 @@ watch(selectedIndex, async (idx) => {
 }
 
 .thAction {
-  width: 48px;
+  width: 76px;
 }
 
 .row {
@@ -408,9 +417,10 @@ watch(selectedIndex, async (idx) => {
 
 .tdAction {
   text-align: right;
+  white-space: nowrap;
 }
 
-.deleteBtn {
+.iconBtn {
   border: none;
   background: transparent;
   padding: 6px;
@@ -421,7 +431,11 @@ watch(selectedIndex, async (idx) => {
   border-radius: 4px;
 
   &:hover {
-    color: $step-red;
+    color: $color-text-secondary;
   }
+}
+
+.deleteBtn:hover {
+  color: $step-red;
 }
 </style>

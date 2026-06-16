@@ -32,6 +32,11 @@ describe('Редактор схемы рабочего процесса', () => 
       });
   });
 
+  it('кнопка-карандаш открывает инлайн-редактирование названия', () => {
+    cy.get('[data-cy=row]').first().find('[data-cy=edit]').click();
+    cy.get('[data-cy=row]').first().find('[data-cy=name-input]').should('exist').type('{esc}');
+  });
+
   it('фильтрует строки по поиску', () => {
     cy.get('[data-cy=search]').type('Сортировка');
     cy.get('[data-cy=row] [data-cy=name]').each(($el) => {
